@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Change Image Color</title>
+</head>
+<style type="text/css">
+	body
+	{
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+	#my-bg
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0 ;
+		mix-blend-mode: hue;
+		background-color: crimson;
+	}
+	img
+	{
+		margin: 0;
+		width: 50%;
+		height: 100%;
+	}
+	h1
+	{
+		margin-left: 50%;
+		margin-top: 12%;
+		font-size: 80px;
+		font-weight: 700 !important;
+		text-align: center;
+		color: white;
+	}
+</style>
+<body>
+	<img src="https://img.freepik.com/free-vector/modern-blue-urban-adventure-suv-vehicle-illustration_1344-205.jpg?w=740&t=st=1690284898~exp=1690285498~hmac=9305bf6310b5f060d13d4d1863c7bc02c4f09fae99cccf88027a372acf78ef70" height="500px" width="500px" alt="...">
+	<div id="my-bg">
+		<h1>Click anywhere in the body to change the color of car image...
+</h1>
+	</div>
+
+	<script type="text/javascript">
+		const bg = document.getElementById('my-bg');
+
+		bg.addEventListener("click", myfunction);
+
+		function myfunction()
+		{
+			var colorR = Math.floor((Math.random() * 256));
+			var colorG = Math.floor((Math.random() * 256));
+			var colorB = Math.floor((Math.random() * 256));	
+			bg.style.backgroundColor = 'rgb('+colorR+','+colorG+', '+colorB+')'; 
+		}
+	</script>
+
+</body>
+</html>
